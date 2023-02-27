@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="alertLabel" prefHeight="303.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195v1.AppointmentAlertController">
+   <children>
+      <Label fx:id="welcomeMessage" layoutX="37.0" layoutY="88.0" prefHeight="51.0" prefWidth="412.0" text="Welcome, this appoint will begin in fifteen minutes:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="appIdLabel" layoutX="102.0" layoutY="167.0" text="Appointment ID: 0007" />
+      <Label fx:id="appDateTimeLabel" layoutX="264.0" layoutY="167.0" prefHeight="17.0" prefWidth="164.0" text="Appointment DateTime" />
+      <Button fx:id="confirmButton" layoutX="227.0" layoutY="214.0" mnemonicParsing="false" onAction="#onOkButtonPress" text="OK" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="407.0" minWidth="914.0" prefHeight="646.0" prefWidth="1161.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c195v1.MainPageController">
+   <children>
+      <TabPane layoutX="25.0" layoutY="27.0" prefHeight="589.0" prefWidth="1112.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Customers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="957.0">
+                     <children>
+                        <ButtonBar layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="163.0">
+                           <buttons>
+                              <Button fx:id="editCustomerButton" mnemonicParsing="false" onAction="#onEditCustomerClick" text="Edit" />
+                              <Button fx:id="deleteCustomerButton" mnemonicParsing="false" onAction="#onDeleteCustomerClick" text="Delete" />
+                           </buttons>
+                        </ButtonBar>
+                        <TableView fx:id="customerTable" layoutX="23.0" layoutY="64.0" onMouseClicked="#onCustomerTableClick" prefHeight="452.0" prefWidth="673.0">
+                          <columns>
+                            <TableColumn fx:id="colCustomerId" prefWidth="39.0" text="ID" />
+                            <TableColumn fx:id="colName" prefWidth="144.0" text="Name" />
+                            <TableColumn fx:id="colAddress" prefWidth="107.0" text="Address" />
+                            <TableColumn fx:id="colPostalCode" prefWidth="139.0" text="Postal Code" />
+                            <TableColumn fx:id="colPhoneNumber" prefWidth="107.0" text="Phone Number" />
+                            <TableColumn fx:id="colDivision" prefWidth="136.0" text="Division" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="quitButton" layoutX="14.0" layoutY="521.0" mnemonicParsing="false" onAction="#onQuitButtonClick" prefHeight="25.0" prefWidth="135.0" text="Quit" />
+                        <AnchorPane layoutX="716.0" layoutY="54.0" prefHeight="301.0" prefWidth="374.0">
+                           <children>
+                              <Button fx:id="confirmCustomerCreateButton" disable="true" layoutX="14.0" layoutY="262.0" mnemonicParsing="false" onAction="#onConfirmCustomerClick" prefHeight="25.0" prefWidth="135.0" text="Save" />
+                              <TextField fx:id="textCustomerID" disable="true" editable="false" layoutX="211.0" layoutY="17.0" text="AUTO-GENERATED" />
+                              <TextField fx:id="textCustomerName" disable="true" layoutX="211.0" layoutY="54.0" />
+                              <TextField fx:id="textCustomerAddress" disable="true" layoutX="211.0" layoutY="91.0" />
+                              <TextField fx:id="textCustomerPostal" disable="true" layoutX="211.0" layoutY="126.0" />
+                              <TextField fx:id="textCustomerPhone" disable="true" layoutX="211.0" layoutY="158.0" />
+                              <Label layoutX="116.0" layoutY="162.0" text="Phone Number" />
+                              <Label layoutX="118.0" layoutY="130.0" text="Postal Code" />
+                              <Label layoutX="135.0" layoutY="95.0" text="Address" />
+                              <Label layoutX="140.0" layoutY="58.0" text="Name" />
+                              <Label layoutX="157.0" layoutY="21.0" text="ID" />
+                              <Label layoutX="135.0" layoutY="201.0" text="Country" />
+                              <ComboBox fx:id="comboCustomerCountry" disable="true" layoutX="210.0" layoutY="197.0" onAction="#onCountrySelect" prefWidth="150.0" promptText="Select A Country" />
+                              <Label layoutX="135.0" layoutY="234.0" text="Division" />
+                              <ComboBox fx:id="comboCustomerDivision" disable="true" layoutX="210.0" layoutY="230.0" onAction="#onDivisionSelect" prefWidth="150.0" promptText="Select a Division" />
+                              <Button fx:id="createCustomerButton" layoutX="-2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Create" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="alertCustomerLabel" layoutX="696.0" layoutY="14.0" prefHeight="17.0" prefWidth="399.0" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Appointments">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="957.0">
+                     <children>
+                        <ButtonBar layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="132.0">
+                          <buttons>
+                              <Button fx:id="editAppointmentButton" mnemonicParsing="false" onAction="#onEditAppointmentClick" text="Edit" />
+                              <Button fx:id="deleteAppointmentButton" mnemonicParsing="false" onAction="#onDeleteAppointmentClick" prefHeight="25.0" text="Delete" />
+                          </buttons>
+                        </ButtonBar>
+                        <TableView fx:id="appointmentTable" layoutX="25.0" layoutY="70.0" onMouseClicked="#onAppointmentTableClick" prefHeight="455.0" prefWidth="799.0">
+                           <columns>
+                              <TableColumn fx:id="colAppointmentId" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="colTitle" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="colDescription" prefWidth="108.0" text="Description" />
+                              <TableColumn fx:id="colLocation" prefWidth="76.0" text="Location" />
+                              <TableColumn fx:id="colContact" prefWidth="86.0" text="Contact" />
+                              <TableColumn fx:id="colType" prefWidth="105.0" text="Type" />
+                              <TableColumn fx:id="colStart" prefWidth="78.0" text="Start" />
+                              <TableColumn fx:id="colEnd" prefWidth="58.0" text="End" />
+                              <TableColumn fx:id="colCustId" prefWidth="70.0" text="Cust ID" />
+                              <TableColumn fx:id="colUserId" prefWidth="67.0" text="User ID" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane layoutX="839.0" layoutY="-5.0" prefHeight="555.0" prefWidth="259.0">
+                           <children>
+                              <TextField fx:id="textAppId" disable="true" editable="false" layoutX="96.0" layoutY="82.0" text="AUTO-GENERATED" />
+                              <TextField fx:id="textAppTitle" disable="true" layoutX="96.0" layoutY="115.0" />
+                              <TextField fx:id="textAppDescription" disable="true" layoutX="96.0" layoutY="153.0" />
+                              <TextField fx:id="textAppLocation" disable="true" layoutX="96.0" layoutY="186.0" />
+                              <TextField fx:id="textAppType" disable="true" layoutX="96.0" layoutY="220.0" />
+                              <DatePicker fx:id="dateStart" disable="true" layoutX="83.0" layoutY="256.0" />
+                              <ComboBox fx:id="hourStart" disable="true" layoutX="20.0" layoutY="294.0" prefHeight="25.0" prefWidth="102.0" promptText="Hour">
+                                  <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="08" />
+                                        <String fx:value="09" />
+                                        <String fx:value="10" />
+                                        <String fx:value="11" />
+                                        <String fx:value="12" />
+                                        <String fx:value="13" />
+                                        <String fx:value="14" />
+                                        <String fx:value="15" />
+                                        <String fx:value="16" />
+                                        <String fx:value="17" />
+                                        <String fx:value="18" />
+                                        <String fx:value="19" />
+                                        <String fx:value="20" />
+                                        <String fx:value="21" />
+                                        <String fx:value="22" />
+                                    </FXCollections>
+                                  </items>
+                              </ComboBox>
+                              <ComboBox fx:id="minuteStart" disable="true" layoutX="135.0" layoutY="294.0" prefHeight="25.0" prefWidth="112.0" promptText="Minute">
+                                      <items>
+                                          <FXCollections fx:factory="observableArrayList">
+                                              <String fx:value="00" />
+                                              <String fx:value="15" />
+                                              <String fx:value="30" />
+                                              <String fx:value="45" />
+                                          </FXCollections>
+                                      </items>
+                              </ComboBox>
+                              <DatePicker fx:id="dateEnd" disable="true" layoutX="83.0" layoutY="323.0" />
+                              <ComboBox fx:id="hourEnd" disable="true" layoutX="22.0" layoutY="355.0" prefHeight="25.0" prefWidth="102.0" promptText="Hour">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="08" />
+                                       <String fx:value="09" />
+                                       <String fx:value="10" />
+                                       <String fx:value="11" />
+                                       <String fx:value="12" />
+                                       <String fx:value="13" />
+                                       <String fx:value="14" />
+                                       <String fx:value="15" />
+                                       <String fx:value="16" />
+                                       <String fx:value="17" />
+                                       <String fx:value="18" />
+                                       <String fx:value="19" />
+                                       <String fx:value="20" />
+                                       <String fx:value="21" />
+                                       <String fx:value="22" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="minuteEnd" disable="true" layoutX="137.0" layoutY="355.0" prefHeight="25.0" prefWidth="112.0" promptText="Minute">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="00" />
+                                        <String fx:value="15" />
+                                        <String fx:value="30" />
+                                        <String fx:value="45" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <ComboBox fx:id="comboAppCustomer" disable="true" layoutX="95.0" layoutY="388.0" prefWidth="150.0" promptText="Select a Customer" />
+                              <ComboBox fx:id="comboAppUser" disable="true" layoutX="97.0" layoutY="423.0" prefWidth="150.0" promptText="Select a User" />
+                              <ComboBox fx:id="comboAppContact" disable="true" layoutX="95.0" layoutY="462.0" onAction="#onContactSelect" prefWidth="150.0" promptText="Select a Contact" />
+                              <Button fx:id="confirmAppCreateButton" disable="true" layoutY="497.0" mnemonicParsing="false" onAction="#onConfirmAppointmentClick" prefHeight="25.0" prefWidth="135.0" text="Save" />
+                              <Button fx:id="createAppointmentButton" layoutX="6.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="135.0" text="Create" />
+                              <Label layoutX="14.0" layoutY="466.0" text="Contact" />
+                              <Label layoutX="13.0" layoutY="224.0" text="Type" />
+                              <Label layoutX="12.0" layoutY="190.0" text="Location" />
+                              <Label layoutX="10.0" layoutY="157.0" text="Description" />
+                              <Label layoutX="14.0" layoutY="119.0" text="Title" />
+                              <Label layoutX="15.0" layoutY="86.0" text="App. ID" />
+                              <Label layoutX="14.0" layoutY="260.0" text="Start" />
+                              <Label layoutX="14.0" layoutY="327.0" text="End" />
+                              <Label layoutX="14.0" layoutY="392.0" text="Customer ID" />
+                              <Label layoutX="14.0" layoutY="427.0" text="User ID" />
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="alertAppointmentLabel" layoutX="634.0" layoutY="14.0" prefHeight="17.0" prefWidth="464.0" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="filterAppointmentCombo" layoutX="395.0" layoutY="42.0" onAction="#onFilterSelect" prefWidth="150.0" promptText="All" />
+                        <Label layoutX="334.0" layoutY="45.0" prefHeight="17.0" prefWidth="47.0" text="Filter:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="reportTab" onSelectionChanged="#onReportSelected" text="Reports">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="31.0" prefHeight="20.0" prefWidth="264.0" text="Total number of appointments by type:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="reportTypeCombo" layoutX="21.0" layoutY="61.0" onAction="#onReportTypeSelect" prefWidth="150.0" promptText="Select A Type" />
+                        <Label layoutX="21.0" layoutY="106.0" prefHeight="20.0" prefWidth="264.0" text="Total number of appointments by Month:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="reportMonthCombo" layoutX="21.0" layoutY="136.0" onAction="#onReportMonthSelect" prefWidth="150.0" promptText="Select A Month" />
+                        <Label fx:id="reportTypeTotal" layoutX="220.0" layoutY="65.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="reportMonthTotal" layoutX="220.0" layoutY="140.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="reportTable" layoutX="21.0" layoutY="216.0" prefHeight="200.0" prefWidth="601.0">
+                          <columns>
+                            <TableColumn fx:id="reportColAppId" prefWidth="108.0" text="Appointment ID" />
+                            <TableColumn fx:id="reportColTitle" prefWidth="75.0" text="Title" />
+                              <TableColumn fx:id="reportColType" prefWidth="93.0" text="Type" />
+                              <TableColumn fx:id="reportColDescription" prefWidth="85.0" text="Description" />
+                              <TableColumn fx:id="reportColStart" prefWidth="68.0" text="Start" />
+                              <TableColumn fx:id="reportColEnd" prefWidth="79.0" text="End" />
+                              <TableColumn fx:id="reportColCustomerId" prefWidth="92.0" text="Customer ID" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="21.0" layoutY="189.0" prefHeight="20.0" prefWidth="192.0" text="Schedule for specific Contact">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="reportContactCombo" layoutX="210.0" layoutY="187.0" onAction="#onReportContactSelect" prefWidth="150.0" promptText="Select a Contact" />
+                        <Label layoutX="757.0" layoutY="223.0" text="Total Number of Customers in System">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="thirdReport" alignment="CENTER" contentDisplay="CENTER" layoutX="651.0" layoutY="200.0" prefHeight="178.0" prefWidth="447.0" text="potential third report" textAlignment="CENTER">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

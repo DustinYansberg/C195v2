@@ -1,0 +1,12 @@
+User 2 attempted to login at 2023-02-26T11:47:33.535457700-08:00[America/Los_Angeles] the log in attempt was true
+User 2 attempted to login at 2023-02-26T11:48:02.618832800-08:00[America/Los_Angeles] the log in attempt was true
+User 2 attempted to login at 2023-02-26T11:49:23.409453800-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-26T11:49:34.389900100-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-26T12:13:49.902329600-08:00[America/Los_Angeles] the log in attempt was unsuccessful
+Someone tried to log in with a bad username
+User 1 attempted to login at 2023-02-27T08:51:25.211278500-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-27T08:53:06.129951700-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-27T08:58:57.965370800-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-27T13:36:30.072537700-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-27T14:04:39.915841800-08:00[America/Los_Angeles] the log in attempt was successful
+User 2 attempted to login at 2023-02-27T14:30:48.283187800-08:00[America/Los_Angeles] the log in attempt was successful
